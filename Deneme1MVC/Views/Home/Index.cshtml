@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Html.ActionLink("Üye Ol","Register","Account")
+@Html.ActionLink("Üye Giriş", "Login", "Account")
+@if (HttpContext.Current.User.Identity.IsAuthenticated == true)
+{
+    @Html.ActionLink("Çıkış", "Logout", "Account")
+}
+
+
